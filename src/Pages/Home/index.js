@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { RepoNames } from "../../Components";
+import { RepoNames, RepoData } from "../../Components";
+import { useNavigate } from 'react-router-dom';
 
 import axios from "axios";
 
@@ -9,6 +10,7 @@ function Home(){
     const [repos, setRepos] = useState([{ }]);
     const [username, setUsername] = useState("");
     const [showRepo, setshowRepo] = useState(false);
+  
     
     async function fetchData() {
         try {
@@ -28,11 +30,16 @@ function Home(){
     }, [])
     
 
+    const histroy = useNavigate()
     const handleSubmit = e => {
         e.preventDefault()
         fetchData()
         setUsername('')
+        histroy.push("/Repolist")
     }
+
+
+  
     
     const updateInput = (e) => {
         const input = e.target.value;
@@ -46,8 +53,9 @@ function Home(){
         <>
         <img className="logo" src="Barebonegithublogo.png" alt="strange GitHub logo"/>
         <form className="container" role="form" onSubmit={handleSubmit}>
-          <label htmlFor="usernameSearch" >Github Username: </label>
+          <label htmlFor="usernameSearch"></label>
           <input
+          placeholder="Github Username"
             id="usernameSearch"
             role="username"
             type="text"
@@ -55,9 +63,10 @@ function Home(){
             onChange={updateInput}
           />
           <input className="button" type="submit" value="Search" onClick={getData} />
+        {setshowRepo ? <RepoNames user={username} results={repos} /> : null}
+      
         </form>
 
-        {setshowRepo ? <RepoNames user={username} results={repos} /> : null}
         </>
         
 
