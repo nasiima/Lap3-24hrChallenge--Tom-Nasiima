@@ -7,15 +7,18 @@
     display: flex;
     justify-content: center;    
     align-items: center;
-
-    
-    
 }
 
 .Navlink{
     text-decoration: none; /* no underline */
     color: white;
-    padding: 10px
+    padding: 10px;
+    cursor: pointer;
+}
+
+.BackBtn{
+    position: absolute;
+    right: 5px;        
 }
 
     
