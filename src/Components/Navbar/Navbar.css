@@ -7,9 +7,6 @@
     display: flex;
     justify-content: center;    
     align-items: center;
-
-    
-    
 }
 
 .Navlink{
@@ -21,7 +18,7 @@
 
 .BackBtn{
     position: absolute;
-    right: 5px;
+    right: 5px;        
 }
 
     
