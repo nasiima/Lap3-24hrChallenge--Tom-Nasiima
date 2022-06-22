@@ -1,23 +1,23 @@
-import { default as GoBtn } from './GoBtn';
-import { screen, render } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
+// import { default as GoBtn } from './GoBtn';
+// import { screen, render } from '@testing-library/react';
+// import userEvent from '@testing-library/user-event';
 
-describe('GoBtn', () => {
-    let getResultMock;
 
-    beforeEach(() => {
-        getResultMock = jest.fn();
-        render(<SearchForm getResult={getResultMock}/>);
-    });
+// test('rit says Go, () => {
+//     render(<App />);
+//     const GoText = screen.getByText("Go");
+//     expect(GoText).toBeInTheDocument();
+//   });
+  
+// //   test('logo is here', () => {
+// //     const {container} = render(<App />);
+// //     const logo = container.getElementsByClassName("App-logo");
+// //     expect(logo).toBeTruthy();
+// //   });
 
-    test('it renders a form', () => {
-        let form = screen.getByRole('form');
-        expect(form).toBeInTheDocument();;
-    });
 
-    test('it calls on getResult prop on form submission', () => {
-        let locationInput = screen.getByLabelText('Location');
-        userEvent.type(locationInput, "Hong Kong{enter}")
-        expect(getResultMock).toHaveBeenNthCalledWith(1, 'Hong Kong');
-    })
-});
+
+//     test('Btn says "GO", () => {
+//         let Go = screen.getbytext('form');
+//         expect(Go).toBeInTheDocument();;
+//     });
