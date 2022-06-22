@@ -1,17 +1,17 @@
 import './style.css'
 
-const RepoNames = ({ user, results }) => {
+const RepoNames = ({ result, results }) => {
    
 
   
  
-  const showRepoNames = results.map((eachRepo) => {
-    const link = `https://www.github.com/${eachRepo.full_name}`;
+  const showRepoNames = results.map((result) => {
+    const link = `https://www.github.com/${result.full_name}`;
 
     return (
       <>
-          <div className="eachRepo" key={eachRepo.name}>
-            <h2>{eachRepo.name}</h2>
+          <div className="result" key={result.name}>
+            <h2>{result.name}</h2>
         </div>
       </>
     );
