@@ -44,7 +44,8 @@ function Home(){
 
     return (
         <>
-         <form className="container" role="form" onSubmit={handleSubmit}>
+        <img className="logo" src="Barebonegithublogo.png" alt="strange GitHub logo"/>
+        <form className="container" role="form" onSubmit={handleSubmit}>
           <label htmlFor="usernameSearch" >Github Username: </label>
           <input
             id="usernameSearch"
