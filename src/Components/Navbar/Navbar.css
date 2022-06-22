@@ -1,0 +1,21 @@
+.Navbar{
+    background-color: black;
+    font-family: Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+    height: 60px;
+    text-align: center;
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+
+    
+    
+}
+
+.Navlink{
+    text-decoration: none; /* no underline */
+    color: white;
+    padding: 10px
+}
+
+    
