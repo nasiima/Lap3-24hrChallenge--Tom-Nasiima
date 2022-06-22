@@ -1,12 +1,12 @@
 .GoBtn{
-    width: 250px;
-    height: 250px;
-    line-height: 230px; 
+    width: 200px;
+    height: 200px;
+    line-height: 190px; 
     border-radius: 50%;
     background-color: black;
     text-align: center;
     vertical-align: middle;
     color: white;
-    font-size: 60px;
+    font-size: xx-large;
     cursor: pointer;
 }
