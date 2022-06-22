@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import axios from "axios";
 
 import './style.css'
+// import Barebonegithublogo from '../../../public';
 
 function Home(){
     const [repos, setRepos] = useState([{ }]);
@@ -43,7 +44,8 @@ function Home(){
 
     return (
         <>
-         <form className="container" role="form" onSubmit={handleSubmit}>
+        <img src="Barebonegithublogo.png" alt=""/>
+        <form className="container" role="form" onSubmit={handleSubmit}>
           <label htmlFor="usernameSearch" >Github Username: </label>
           <input
             id="usernameSearch"
