@@ -1,25 +1,45 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+
+import axios from "axios";
 
 import './style.css'
 
 function Home(){
-    const [username, setUsername] = useState('')
-
-
-
-    const displayRepo = () => {}
-
-
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-      };
+    const [repos, setRepos] = useState([{ }]);
+    const [username, setUsername] = useState("");
+    const [showRepo, setshowRepo] = useState(false);
     
-      const updateInput = (e) => {
+    async function fetchData() {
+        try {
+            
+            const { data } = await axios.get(`https://api.github.com/users/${username}/repos`);
+            console.log(data);
+            setRepos(data);
+        } catch (err) {
+            console.warn(err.message);
+            alert("The username does not exsist !");
+        }
+    }
+    
+
+    useEffect(() => {
+        fetchData()
+    }, [])
+    
+
+    const handleSubmit = e => {
+        e.preventDefault()
+        fetchData()
+        setUsername('')
+    }
+    
+    const updateInput = (e) => {
         const input = e.target.value;
         setUsername(input);
-      };
-
-
+    };
+    
+    
+    const getData = () => setshowRepo(true);
 
     return (
         <>
@@ -32,7 +52,7 @@ function Home(){
             className="userNameSearch"
             onChange={updateInput}
           />
-          <input className="button" type="submit" value="Search" onClick={displayRepo} />
+          <input className="button" type="submit" value="Search" onClick={getData} />
         </form>
         </>
 
