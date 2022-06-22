@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { RepoNames } from "../../Components";
 
 import axios from "axios";
 
@@ -12,9 +13,9 @@ function Home(){
     async function fetchData() {
         try {
             
-            const { data } = await axios.get(`https://api.github.com/users/${username}/repos`);
-            console.log(data);
-            setRepos(data);
+            const git = await axios.get(`https://api.github.com/users/${username}/repos`);
+            console.log(git.data);
+            setRepos(git.data);
         } catch (err) {
             console.warn(err.message);
             alert("The username does not exsist !");
@@ -54,7 +55,10 @@ function Home(){
           />
           <input className="button" type="submit" value="Search" onClick={getData} />
         </form>
+
+        {setshowRepo ? <RepoNames user={username} results={repos} /> : null}
         </>
+        
 
 
     )
