@@ -1,0 +1,14 @@
+.AboutTest{
+    /* margin: 50% 2% 80% 1%; */
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 10%;
+    animation: fadeIn1 5s;
+}
+
+
+@keyframes fadeIn1 {
+    from { color:rgb(255, 252, 252); }
+    to { color: rgb(0, 0, 0); }
+}
+    

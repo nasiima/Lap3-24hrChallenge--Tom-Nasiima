@@ -1,0 +1,41 @@
+.Title{
+    width: 200px;
+    height: 200px;
+    line-height: 190px; 
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+    font-size: xx-large;
+    cursor: pointer;
+    mask-clip: 32px;
+    position: absolute;
+    top: 1px;
+    left: -20px;
+    z-index: 1;
+    animation: fadeIn 5s;
+    /* animation-fill-mode: forwards; */
+}
+
+.Title:focus{
+    width: 10px;
+    height: 10px;
+}
+
+.Title:hover{
+    width: 180px;
+    height: 180px;
+    font-size: x-large;
+    transition: 1s ease-in-out;
+    color: rgb(84, 84, 84)
+}
+
+@keyframes fadeIn {
+    from { color:black; }
+    to { color: white; }
+}
+
+.Title:focus {
+    background-color:red;
+}

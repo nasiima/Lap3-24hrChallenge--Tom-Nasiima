@@ -1,8 +1,7 @@
 * {
-    margin: 0;
-    padding: 0;
-    
+
 }
+
 
 
 label {
@@ -11,11 +10,6 @@ label {
 
 }
 
-.button {
-    display: block;
-    padding: 10px;
-    margin: 5%;
-}
 .container {
     position: absolute;
     width: 100%;
@@ -26,11 +20,36 @@ label {
     justify-content: center;
     align-items: center;
     color: black;
+    z-index: -2;
+
+    
+    
     
 }
 
-.logo{
-    height: 130px;
-    width: 130px;   
-    
+.homePage{
+    height: 100%;
 }
+.logo{
+    width: 100px;
+    height: 100px;
+    position: relative;
+}
+
+.userNameSearch{
+    height: 30px;
+    border-radius: 2% ;
+    padding-left: 1%;
+    margin: 3%;
+}
+
+.button{
+    width: 80px;
+    height: 80px;
+    color: white;
+    background-color: black;
+    border-radius: 50%;
+   
+    margin: 2%;
+}
+

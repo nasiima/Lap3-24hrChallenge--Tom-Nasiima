@@ -1,5 +1,5 @@
 import React from 'react'
-import '../GoBtn/GoBtn.css'
+import '../Title/GoBtn.css'
 
 export default function TitleRepos() {
   return (
