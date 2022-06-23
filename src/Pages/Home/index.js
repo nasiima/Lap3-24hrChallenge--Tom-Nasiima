@@ -108,7 +108,7 @@ function Home(){
             <p>Bare-Bones GitHub</p>
             <label htmlFor="usernameSearch"></label>
             <input
-            placeholder="Github Username"
+            placeholder="GitHub Username"
                 id="usernameSearch"
                 role="username"
                 type="text"
