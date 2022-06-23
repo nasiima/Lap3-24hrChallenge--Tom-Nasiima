@@ -59,10 +59,14 @@ function Home(){
             console.log("TOTAL WATCHERS",watchCounter);
             console.log("TOTAL 'main' BRANCHS",isMainCounter);
 
-            const totalData = {issueCounter,folkCounter,reposCounter,sizeCounter,watchCounter,isMainCounter}
-            console.log(totalData)
-            
-            navigate("/repolist",{totalData} );
+            navigate("/repolist");
+        
+            // navigate("/repolist",{issueCounter} );
+
+            // const totalData = {issueCounter,folkCounter,reposCounter,sizeCounter,watchCounter,isMainCounter}
+            // console.log(totalData)
+            // navigate("/repolist",{totalData} );
+
                 
 
         } catch (err) {
