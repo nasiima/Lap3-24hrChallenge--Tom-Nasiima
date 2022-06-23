@@ -1,6 +1,6 @@
 import React from 'react';
 
-import GoBtn from './Components/GoBtn/GoBtn';
+import Title from './Components/Title/Title';
 import Navbar from './Components/Navbar/Navbar';
 import TitleRepos from './Components/TitleRepos/TitleRepos';
 import {Routes, Route, Link } from 'react-router-dom';
@@ -8,6 +8,8 @@ import {Routes, Route, Link } from 'react-router-dom';
 import {Home} from './Pages'
 import About from './Pages/About/About';
 import Repolist from './Pages/Repolist/Repolist'
+
+import './index.css'
 
 function App() {
   return (
