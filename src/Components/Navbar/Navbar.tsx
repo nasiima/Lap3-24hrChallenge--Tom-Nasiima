@@ -10,12 +10,12 @@ export default function Navbar() {
   return (
     <div className="Navbar">
         
-    <NavLink className="Navlink" to="/home">Home</NavLink>
-    <NavLink className="Navlink" to="/repolist">Repos</NavLink>
-    <NavLink className="Navlink" to="/about">About</NavLink>
+      <NavLink className="Navlink" to="/home">Home</NavLink>
+      <NavLink className="Navlink" to="/repolist">Repos</NavLink>
+      <NavLink className="Navlink" to="/about">About</NavLink>
 
-    <p className="Navlink BackBtn" onClick={() => navigate(-1)}>Back</p>
-        
+      <p className="Navlink BackBtn" onClick={() => navigate(-1)}>Back</p>
+          
     </div>
   )
 } 
