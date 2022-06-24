@@ -1,3 +1,8 @@
+
+Checkout the site on netlify:
+https://dreamy-salmiakki-a24391.netlify.app/home
+- after searching, check the insepector to see the data pulled, we had problems sending it from page to page
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
