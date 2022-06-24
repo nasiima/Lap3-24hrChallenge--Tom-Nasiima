@@ -11,10 +11,12 @@ const RepoNames = ({ result, results }) => {
     return (
       <>
           <div className="result" key={result.name}>
+            <div className='each'> 
             <h2>{result.name}</h2>
             <h3> 🌟 stargazers: {result.stargazers_count}</h3>
               <h3> 🍴 Forks:  {result.forks_count}</h3>
               <h3> 🎫 Issues: {result.open_issues}</h3>
+            </div>
         </div>
       </>
     );
